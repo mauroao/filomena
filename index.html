@@ -70,43 +70,64 @@
             hsl(153deg 17% 42%) 67%,
             hsl(152deg 18% 36%) 78%,
             hsl(151deg 19% 31%) 89%,
-            hsl(150deg 20% 25%) 100%
+            #334d40 100%
             );
         }
 
         .container {
             background-color: #f8f9fa;
         }
+
+        .contato {
+            background-color: #334d40;
+        }
+        .contato .card {
+            background-color: #f8f9fa ;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="header background-styled">
-            <img src="filomena.jpg" alt="Foto da Psicóloga Filomena Emílio" class="profile-image">
-            <br />
-            <h1> Filomena Emílio | Psicóloga</h1>
-        </header>
-        <section>
-            <h2 class="mt-4 mb-3">Olá, seja muito bem-vindo!</h2>
-            <p>Eu sou Filomena Emílio, formada em psicologia em 2008, tenho pós graduações nas áreas de  Terapia Cognitiva Comportamental (TCC), Saúde Mental e Psiquiatra.</p>
-            <h2 class="mt-4 mb-3">Atendimento online e presencial</h2>
-            <p>Realizo atendimentos de forma online e presencial, com adolescentes, adultos e casais. Com experiência nas áreas Depressão, Ansiedade, Problemas de relacionamento e Transtornos Mentais.</p>
-            <h2 class="mt-4 mb-3">Atendimento humanizado</h2>
-            <p>Busco um atendimento humanizado e individualizado para conseguir ajudar a lidar com seus problemas e melhorar sua qualidade de vida.</p>
-        </section>
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <header class="header background-styled h-100">
+                    <img src="filomena.jpg" alt="Foto da Psicóloga Filomena Emílio" class="profile-image">
+                    <br />
+                    <h1> Filomena Emílio | Psicóloga</h1>
+                </header>
+            </div>
+            <div class="col-lg">
+                <section>
+                    <h2 class="mt-4 mb-3">Olá, seja muito bem-vindo!</h2>
+                    <p>Eu sou Filomena Emílio, formada em psicologia em 2008, tenho pós graduações nas áreas de  Terapia Cognitiva Comportamental (TCC), Saúde Mental e Psiquiatra.</p>
+                    <h2 class="mt-4 mb-3">Atendimento online e presencial</h2>
+                    <p>Realizo atendimentos de forma online e presencial, com adolescentes, adultos e casais. Com experiência nas áreas Depressão, Ansiedade, Problemas de relacionamento e Transtornos Mentais.</p>
+                    <h2 class="mt-4 mb-3">Atendimento humanizado</h2>
+                    <p>Busco um atendimento humanizado e individualizado para conseguir ajudar a lidar com seus problemas e melhorar sua qualidade de vida.</p>
+                </section>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-lg-4 contato p-4">
+                <section class="card p-4">
+                    <h2 class="mt-4 mb-3">Contato</h2>
+                    <p><strong>Filomena Cogo Emílio</strong></p>
+                    <p>CRP: 06/84210</p>
+                    <p><i class="bi bi-envelope me-1"></i> <a target="_blank" href="mailto:filomenaeattorre@gmail.com">filomenaeattorre@gmail.com</a></p>
+                    <p><i class="bi bi-instagram me-1"></i> <a target="_blank" href="https://www.instagram.com/psi_filomena/">@psi_filomena</a></p>
+                    <p><i class="bi bi-whatsapp me-1"></i> (11) 996411889 </p>
 
-        <section>
-            <h2 class="mt-4 mb-3">Contato</h2>
-            <p><strong>Filomena Cogo Emílio</strong></p>
-            <p>CRP: 06/84210</p>
-            <p><i class="bi bi-envelope me-1"></i> <a target="_blank" href="mailto:filomenaeattorre@gmail.com">filomenaeattorre@gmail.com</a></p>
-            <p><i class="bi bi-instagram me-1"></i> <a target="_blank" href="https://www.instagram.com/psi_filomena/">@psi_filomena</a></p>
-            <p><i class="bi bi-whatsapp me-1"></i> (11) 996411889 </p>
+                    <button type="button" class="btn btn-success fw-bold " onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996411889'">
+                        <i class="bi bi-whatsapp me-1"></i> Contato via WhatsApp
+                    </button>
+                </section>
+            </div>
+            <div class="col-lg">
+                .
+            </div>
+        </div>
 
-            <button type="button" class="btn btn-success fw-bold " onclick="window.location.href='https://api.whatsapp.com/send?phone=5511996411889'">
-                <i class="bi bi-whatsapp me-1"></i> Contato via WhatsApp
-            </button>
-        </section>
         <footer class="background-styled text-center p-3 mt-5">
             © 2023 Filomena Emílio | Todos os direitos reservados
         </footer>
