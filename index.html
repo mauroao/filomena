@@ -108,12 +108,12 @@
 
         function checkVisibility() {
             elements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+                const rect = element.getBoundingClientRect();
+                const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
 
-            if (rect.top < windowHeight - rect.height / 2 && rect.bottom > 0) {
-                element.classList.add('visible');
-            }
+                if (rect.top < windowHeight - rect.height / 2 && rect.bottom > 0) {
+                    element.classList.add('visible');
+                }
             });
         }
 
@@ -124,7 +124,7 @@
             const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
 
             if (rect.top >= windowHeight - rect.height / 2 || rect.bottom <= 0) {
-            element.classList.add('hidden');
+                element.classList.add('hidden');
             }
         });
 
@@ -148,12 +148,12 @@
             </div>
             <div class="col-lg">
                 <section>
-                    <h2 class="mt-4 mb-3">Olá, seja muito bem-vindo!</h2>
-                    <p>Eu sou Filomena Emílio, formada em psicologia em 2008, tenho pós graduações nas áreas de  Terapia Cognitiva Comportamental (TCC), Saúde Mental e Psiquiatra.</p>
-                    <h2 class="mt-4 mb-3">Atendimento online e presencial</h2>
-                    <p>Realizo atendimentos de forma online e presencial, com adolescentes, adultos e casais. Com experiência nas áreas Depressão, Ansiedade, Problemas de relacionamento e Transtornos Mentais.</p>
-                    <h2 class="mt-4 mb-3">Atendimento humanizado</h2>
-                    <p>Busco um atendimento humanizado e individualizado para conseguir ajudar a lidar com seus problemas e melhorar sua qualidade de vida.</p>
+                    <h2 class="mt-4 mb-3 animate">Olá, seja muito bem-vindo!</h2>
+                    <p class="animate">Eu sou Filomena Emílio, formada em psicologia em 2008, tenho pós graduações nas áreas de  Terapia Cognitiva Comportamental (TCC), Saúde Mental e Psiquiatra.</p>
+                    <h2 class="mt-4 mb-3 animate">Atendimento online e presencial</h2>
+                    <p class="animate">Realizo atendimentos de forma online e presencial, com adolescentes, adultos e casais. Com experiência nas áreas Depressão, Ansiedade, Problemas de relacionamento e Transtornos Mentais.</p>
+                    <h2 class="mt-4 mb-3 animate">Atendimento humanizado</h2>
+                    <p class="animate">Busco um atendimento humanizado e individualizado para conseguir ajudar a lidar com seus problemas e melhorar sua qualidade de vida.</p>
                 </section>
             </div>
         </div>
