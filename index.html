@@ -90,7 +90,48 @@
             background-color: var(--custom-dark);
         }
 
+        .hidden {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .visible {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.animate');
+
+        function checkVisibility() {
+            elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+            if (rect.top < windowHeight - rect.height / 2 && rect.bottom > 0) {
+                element.classList.add('visible');
+            }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+            if (rect.top >= windowHeight - rect.height / 2 || rect.bottom <= 0) {
+            element.classList.add('hidden');
+            }
+        });
+
+        checkVisibility();
+        });
+
+    </script>
 </head>
 <body>
     <div class="container">
@@ -117,7 +158,7 @@
             </div>
         </div>
         <div class="row no-gutters">
-            <div class="col-lg-4 dark-bg p-4">
+            <div class="col-lg-4 dark-bg p-4 animate">
                 <section class="card p-4">
                     <h2 class="mb-3">Contato</h2>
                     <p><strong>Filomena Cogo Emílio</strong></p>
@@ -131,9 +172,9 @@
                     </button>
                 </section>
             </div>
-            <div class="col-lg">
+            <div class="col-lg animate">
                 <section>
-                    <h2 class="mt-4 mb-3">Como chegar no consultório</h2>
+                    <h2 class="mt-4 mb-3 ">Como chegar no consultório</h2>
                     <iframe style="border: 1px solid var(--custom-dark) ;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.346524498331!2d-46.64163952388164!3d-23.62775806403642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5af8f7958a23%3A0xa2f79c41315a7dbe!2sR.%20Maj.%20Freire%2C%20190%20-%20Vila%20Monte%20Alegre%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004304-110!5e0!3m2!1spt-BR!2sbr!4v1719517204964!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p class="pt-3">R. Maj. Freire, 190<br />
                     Vila Monte Alegre<br />
